@@ -346,7 +346,7 @@ Use Array.prototype.every() to determine if every person in the devs array is
   array is at least 19 years old.
 - Store the result (true or false) in the variable 'isEveryone19OrOlder'.
 */
-
+/*
 const devs = [
     { name: 'Alex', year: 1988 },
     { name: 'Dani', year: 1986 },
@@ -363,4 +363,33 @@ let isEveryone19OrOlder = devs.every((dev) => {
 // Check your work:
 console.log('Exercise 7 my result: ', isEveryone19OrOlder);
 console.log('Exercise 7 correct result: ', false);
+*/
+
+/*
+Exercise 8: Array.prototype.find()
+
+Use Array.prototype.find() to identify and retrieve the comment object with 
+a specific ID 823423 from an array of comment objects.
+
+- Assign the found comment object to the variable 'commentById'.
+*/
+
+const comments = [
+    { text: 'Love this!', id: 523423 },
+    { text: 'Super good', id: 823423 },
+    { text: 'You are the best', id: 2039842 },
+    { text: 'Ramen is my fav food ever', id: 123523 },
+    { text: 'Nice Nice Nice!', id: 542328 },
+  ];
+  
+
+let commentById = comments.find((comment) => {
+    return comment.text === 'Super good'
+});
+
+// Complete the exercise in the space below:
+
+// Check your work:
+console.log('Exercise 8 my result: ', commentById);
+console.log('Exercise 8 correct result: ', { text: 'Super good', id: 823423 });
 
