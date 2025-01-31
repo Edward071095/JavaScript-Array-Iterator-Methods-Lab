@@ -160,7 +160,7 @@ from an array of inventor objects
 */
 
 
-
+/*
 const inventors = [
     { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
     { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
@@ -189,4 +189,116 @@ console.log('Exercise 4 correct result: ', {
   year: 1815,
   passed: 1852,
 });
+*/
+
+
+/*
+Exercise 5: Array.prototype.map()
+
+Use the Array.prototype.map() method to reformat each name in the 'people' 
+array. The goal is to convert names from "Last, First" format to "First Last" 
+format.
+
+Hint: Use the String.prototype.split() method to separate the first and last 
+      names. You can split the string using ', ' as the separator.
+      After splitting the names, rearrange them to the "First Last" format.
+*/
+
+
+const people = [
+    'Becker, Carl',
+    'Beckett, Samuel',
+    'Beddoes, Mick',
+    'Beecher, Henry',
+    'Beethoven, Ludwig',
+    'Begin, Menachem',
+    'Belloc, Hilaire',
+    'Bellow, Saul',
+    'Benchley, Robert',
+    'Benenson, Peter',
+    'Ben-Gurion, David',
+    'Benjamin, Walter',
+    'Benn, Tony',
+    'Bennington, Chester',
+    'Benson, Leana',
+    'Bent, Silas',
+    'Bentsen, Lloyd',
+    'Berger, Ric',
+    'Bergman, Ingmar',
+    'Berio, Luciano',
+    'Berle, Milton',
+    'Berlin, Irving',
+    'Berne, Eric',
+    'Bernhard, Sandra',
+    'Berra, Yogi',
+    'Berry, Halle',
+    'Berry, Wendell',
+    'Bethea, Erin',
+    'Bevan, Aneurin',
+    'Bevel, Ken',
+    'Biden, Joseph',
+    'Bierce, Ambrose',
+    'Biko, Steve',
+    'Billings, Josh',
+    'Biondo, Frank',
+    'Birrell, Augustine',
+    'Black, Elk',
+    'Blair, Robert',
+    'Blair, Tony',
+    'Blake, William',
+  ];
+
+let firstLast = people.map(name => {
+    let [first, last] = name.split(', ');
+    return `${last} ${first}`;
+});
+
+
+
+// Complete the exercise in the space below:
+
+// Check your work:
+console.log('Exercise 5 my result: ', firstLast);
+console.log('Exercise 5 correct result: ', [
+  'Carl Becker',
+  'Samuel Beckett',
+  'Mick Beddoes',
+  'Henry Beecher',
+  'Ludwig Beethoven',
+  'Menachem Begin',
+  'Hilaire Belloc',
+  'Saul Bellow',
+  'Robert Benchley',
+  'Peter Benenson',
+  'David Ben-Gurion',
+  'Walter Benjamin',
+  'Tony Benn',
+  'Chester Bennington',
+  'Leana Benson',
+  'Silas Bent',
+  'Lloyd Bentsen',
+  'Ric Berger',
+  'Ingmar Bergman',
+  'Luciano Berio',
+  'Milton Berle',
+  'Irving Berlin',
+  'Eric Berne',
+  'Sandra Bernhard',
+  'Yogi Berra',
+  'Halle Berry',
+  'Wendell Berry',
+  'Erin Bethea',
+  'Aneurin Bevan',
+  'Ken Bevel',
+  'Joseph Biden',
+  'Ambrose Bierce',
+  'Steve Biko',
+  'Josh Billings',
+  'Frank Biondo',
+  'Augustine Birrell',
+  'Elk Black',
+  'Robert Blair',
+  'Tony Blair',
+  'William Blake',
+]);
 
